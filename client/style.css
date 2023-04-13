@@ -104,7 +104,7 @@ animation: move-wave 3s;
 
   padding-bottom: 20px;
   scroll-behavior: smooth;
-  z-index: 999;
+  z-index: 9999;
 }
 
 /* hides scrollbar */
@@ -118,7 +118,7 @@ animation: move-wave 3s;
 }
 
 .ai {
-  background: #40414F;
+
 }
 
 .chat {
@@ -133,24 +133,19 @@ animation: move-wave 3s;
 }
 
 .profile {
-  width: 36px;
-  height: 36px;
+  width: 45px;
+  height: 45px;
   border-radius: 5px;
 
-  background: #5436DA;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.ai .profile {
-  background: #10a37f;
-}
-
 .profile img {
-  width: 60%;
-  height: 60%;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
 }
 
@@ -185,17 +180,20 @@ form {
   max-width: 1280px;
   margin: 0 auto;
   padding: 10px;
-  background: #40414F;
-
+  background: #fffafa;
+  z-index: 999;
   display: flex;
   flex-direction: row;
   gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 3px white;
+  border: 5px solid transparent;
 }
 
 textarea {
   width: 100%;
 
-  color: #fff;
+  color: black;
   font-size: 18px;
 
   padding: 10px;
@@ -216,3 +214,4 @@ form img {
   width: 30px;
   height: 30px;
 }
+
