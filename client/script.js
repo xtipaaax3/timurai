@@ -11,13 +11,13 @@ function loader(element) {
 
     loadInterval = setInterval(() => {
         // Update the text content of the loading indicator
-        element.textContent += 'Hmmm... ';
+        element.textContent += 'Hmm...';
 
         // If the loading indicator has reached three dots, reset it
-        if (element.textContent === '....') {
-            element.textContent = '';
+        if (element.textContent === 'Hmm...') {
+            element.textContent = 'Hmm...';
         }
-    }, 4000);
+    }, 300);
 }
 
 function typeText(element, text) {
