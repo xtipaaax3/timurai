@@ -1,4 +1,4 @@
-setTimeout(funkcijabatonga, 3000);
+
 
 var minShadow = 5;
 var maxShadow = 150;
@@ -66,15 +66,4 @@ if (!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|t
 
    });
    
-}
-
-
-function funkcijabatonga()  {
-
-    document.getElementById("stajleri").disabled=true;
-    document.getElementById("stajlovi").disabled=false;
-    document.getElementById("sveobicnobbrt").style.display = "block";
-    document.getElementById("bratalica").style.display = "none";
-
-
 }
