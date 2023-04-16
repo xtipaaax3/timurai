@@ -5,10 +5,24 @@
     <link rel="icon" type="image/svg+xml" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TimurAI - v1.0</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" id="stajlovi" disabled />
+    <link rel="stylesheet" href="stajlesss.css" id="stajleri" />
   </head>
   <body>
 
+
+    <div class="loadingbar" id="bratalica">
+    <div id="kontejner">
+      <input type="checkbox" id="water"/>
+      <label for="water">
+        <div id="fill"></div>
+      </label>
+      <span>UCITAVANJE</span>
+      <span id="progress">0%</span>
+    </div>
+  </div>
+
+<div class="sveobicno" id="sveobicnobbrt" style="display: none;">
     <div class="waveWrapper waveAnimation">
       <div class="waveWrapperInner bgTop">
         <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
@@ -20,7 +34,17 @@
         <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
       </div>
     </div>
-
+    <h1>
+      <span>T</span>
+      <span>I</span>
+      <span>M</span>
+      <span>U</span>
+      <span>R</span>
+      <span>-</span>
+      <span>A</span>
+      <span>I</span>
+    </br>
+    </h1>
     <div id="app">
       <div id="chat_container"></div>
 
@@ -29,7 +53,9 @@
         <button type="submit"><img src="assets/send.svg" alt="send" />
       </form>
     </div>
-
+    </div>
     <script type="module" src="script.js"></script>
+    <script type="module" src="glavni.js"></script>
+    <script type="module" src="loader.js"></script>   <!-- NAPOMENA : TIMURE SUTRA DODAJ NOVI TAB BAR -->
   </body>
 </html>
