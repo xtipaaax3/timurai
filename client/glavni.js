@@ -1,4 +1,4 @@
-setTimeout(funkcijabatonga, 3000);
+setTimeout(funkcijabatonga(), 3000);
 
 var minShadow = 5;
 var maxShadow = 150;
