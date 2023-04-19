@@ -1,11 +1,10 @@
 import bot from './assets/bot.jpg'
 import user from './assets/user.svg'
 
-const form = document.querySelector('form')
+const form = document.querySelector('#forma')
 const chatContainer = document.querySelector('#chat_container')
 
 let loadInterval
-
 function loader(element) {
     element.textContent = ''
 

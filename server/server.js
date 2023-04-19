@@ -3,8 +3,6 @@ import * as dotenv from 'dotenv'
 import cors from 'cors'
 import { Configuration, OpenAIApi } from 'openai'
 
-setTimeout(funkcijabatonga, 3000);
-
 dotenv.config()
 
 const configuration = new Configuration({
@@ -19,7 +17,7 @@ app.use(express.json())
 
 app.get('/', async (req, res) => {
   res.status(200).send({
-    message: 'Hello from CodeX!'
+    message: 'Hello from Timur!'
   })
 })
 
@@ -48,13 +46,3 @@ app.post('/', async (req, res) => {
 })
 
 app.listen(5000, () => console.log('AI server started on http://localhost:5000'))
-
-function funkcijabatonga()  {
-
-  document.getElementById("stajleri").disabled=true;
-  document.getElementById("stajlovi").disabled=false;
-  document.getElementById("sveobicnobbrt").style.display = "block";
-  document.getElementById("bratalica").style.display = "none";
-
-
-}
