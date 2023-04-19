@@ -538,4 +538,9 @@ z-index: 555;
   .message::-webkit-scrollbar {
     display: none;
   }
+  .text {
+    position: relative;
+    left: 10px;
+
+  }
 }
