@@ -562,4 +562,16 @@ z-index: 555;
     background-color: var(--body-color);
     transition: all 0.3s ease;
   }
+  .search-input {
+    position: absolute;
+    top: 10px;
+    left: 38px;
+    font-size: 5px;
+    background: none;
+    color: var(--text-color);
+    width: 195px;
+    height: 20px;
+    border: none;
+    outline: none;
+  }
 }
