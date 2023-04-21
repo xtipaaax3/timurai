@@ -91,7 +91,7 @@ body.dark{
 }
 
 .sidebar .text{
-    font-size: 17px;
+    font-size: 11px;
     font-weight: 500;
     white-space: nowrap;
     opacity: 1;
@@ -181,7 +181,7 @@ body.dark .sidebar header .toggle{
     background-color: var(--primary-color-light);
     color: var(--text-color);
     border-radius: 6px;
-    font-size: 17px;
+    font-size:17px;
     font-weight: 500;
     transition: var(--tran-05);
 }
@@ -333,7 +333,7 @@ body.dark .home .text{
   position: absolute;
   top: 10px;
   left: 38px;
-  font-size: 14px;
+  font-size: 10px;
   background: none;
   color: var(--text-color);
   width: 195px;
@@ -518,7 +518,7 @@ z-index: 555;
       1px 1px 0 black;
     font-size: 10px;
   
-    max-width: 100%;
+    max-width: 50%;
     overflow-x: scroll;
     z-index: 555;
   
@@ -542,5 +542,24 @@ z-index: 555;
     position: relative;
     left: 65px;
 
+  }
+  .sidebar .text{
+    font-size: 15px;
+    font-weight: 500;
+    left: 10px;
+    white-space: nowrap;
+    opacity: 1;
+}
+.search-form {
+    position: relative;
+    top: 95%;
+    left: 60%;
+    width: 100px;
+    height: 40px;
+    border-radius: 40px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translate(-50%, -50%);
+    background-color: var(--body-color);
+    transition: all 0.3s ease;
   }
 }
