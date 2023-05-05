@@ -11,12 +11,9 @@ function updateLoader() {
 }
 
 
-setTimeout(funkcijabro, 3000)
 
 function funkcijabro()
 {
-    const script = document.querySelector('script[src="loader.js"][type="module"]');
-    script.remove();
   document.getElementById("ideovoideovo").style.display = "none"
   document.getElementById("jaojjebotew").style.display = "block"
   document.getElementById("neznamaaa").style.display = "block"
