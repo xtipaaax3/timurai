@@ -1,6 +1,19 @@
 import bot from './assets/bot.jpg'
 import user from './assets/user.svg'
 
+const btn = document.querySelector("#btn");
+const sidebar = document.querySelector(".sidebar");
+const searchBtn = document.querySelector(".bx-search");
+
+btn.onclick = function () {
+  sidebar.classList.toggle("active");
+};
+
+searchBtn.onclick = function () {
+  sidebar.classList.toggle("active");
+};
+
+
 const form = document.querySelector('#forma')
 const chatContainer = document.querySelector('#chat_container')
 

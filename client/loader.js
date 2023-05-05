@@ -1,10 +1,25 @@
-window.onload = function(){
-    var elm = document.querySelector('#progress');
-    setInterval(function(){
-      if(!elm.innerHTML.match(/100%/gi)){
-        elm.innerHTML = (parseInt(elm.innerHTML) + 1) + '%';
-      } else {
-        clearInterval();
-      }
-    }, 18)
-  }
+const loadingNumber = document.querySelector('#loadingNumber');
+const loadingCircle = document.querySelector('.loading-circle');
+let load = 0;
+
+setInterval(updateLoader, 20);
+
+function updateLoader() {
+  load += (load < 100);
+  loadingNumber.innerHTML = load;
+  loadingCircle.style.background = 'conic-gradient(from 0deg at 50% 50%, rgba(111, 123, 247, 1) 0%, rgba(155, 248, 244, 1) ' + load + '%, #101012 ' + load + '%)'
+}
+
+
+setTimeout(funkcijabro, 3000)
+
+function funkcijabro()
+{
+    const script = document.querySelector('script[src="loader.js"][type="module"]');
+    script.remove();
+  document.getElementById("ideovoideovo").style.display = "none"
+  document.getElementById("jaojjebotew").style.display = "block"
+  document.getElementById("neznamaaa").style.display = "block"
+  document.getElementById("stajlovi").disabled=false;
+  document.getElementById("stajleribrt").disabled=true
+}
