@@ -36,4 +36,46 @@ window.addEventListener('click', function(event) {
     popup.style.display = "none";
   }
 });
+function showTipaPopup() {
+  var browser = '';
+  if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
+      browser = 'Opera';
+  }
+  else if(navigator.userAgent.indexOf("Chrome") != -1 ){
+      browser = 'Google Chrome';
+  }
+  else if(navigator.userAgent.indexOf("Safari") != -1){
+      browser = 'Safari';
+  }
+  else if(navigator.userAgent.indexOf("Firefox") != -1 ){
+      browser = 'Mozilla Firefox';
+  }
+  else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )){
+      browser = 'Microsoft Internet Explorer';
+  }
+  else if(navigator.userAgent.indexOf("Edge") != -1 ){
+      browser = 'Microsoft Edge';
+  }
+  else if(navigator.userAgent.indexOf("Trident") != -1 ){
+      browser = 'Microsoft Internet Explorer';
+  }
+  else{
+      browser = 'Unknown Browser';
+  }
+  
+  var text = 'Korisnik se prijavio preko ' + browser + ' preglednika.';
+  var tipaPopup = TipaPopup({
+    title: '',
+    message: text,
+    duration: 5000,
+    position: 'center',
+    type: 'success',
+    width: '200px',
+    height: 'auto',
+    closeBtn: true,
+    closeOnClick: false
+  });
+  
+  tipaPopup.show();
+}
 
