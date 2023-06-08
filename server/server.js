@@ -5,15 +5,11 @@ import { Configuration, OpenAIApi } from 'openai';
 
 dotenv.config();
 
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
-const openai = new OpenAIApi(configuration);
-
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+const openai = new OpenAIApi(process.env.OPENAI_API_KEY);
 
 app.get('/', async (req, res) => {
   res.status(200).send({
@@ -25,29 +21,26 @@ app.post('/', async (req, res) => {
   try {
     const prompt = req.body.prompt;
 
-    // Provjera pitanja o vlasniku
-    if (prompt.toLowerCase().includes('ko je tvoj vlasnik?')) {
-      const response = {
-        message: 'Moj vlasnik je Timur.'
-      };
-      return res.status(200).json(response);
-    }
-
     const response = await openai.createCompletion({
-      model: 'text-davinci-003',
-      messages: [
-        { role: 'system', content: 'You are a helpful assistant.' },
-        { role: 'user', content: prompt },
-      ],
-      temperature: 0.6,
+      model: "text-davinci-003",
+      prompt: `${prompt}`,
+      temperature: 0.7,
       max_tokens: 100,
+      top_p: 1.0,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
     });
 
-    const answer = response.choices[0].message.content;
-    res.status(200).json({ message: answer });
+    const { choices } = response.data;
+    const botResponse = choices[0].text.trim();
+
+    res.status(200).send({
+      bot: botResponse
+    });
+
   } catch (error) {
     console.error(error);
-    res.status(500).send(error || 'Something went wrong');
+    res.status(500).send(error || 'Kao TIMUR AI, primjecujem grešku??');
   }
 });
 

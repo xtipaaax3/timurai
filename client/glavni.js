@@ -36,46 +36,72 @@ window.addEventListener('click', function(event) {
     popup.style.display = "none";
   }
 });
-function showTipaPopup() {
-  var browser = '';
-  if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
-      browser = 'Opera';
-  }
-  else if(navigator.userAgent.indexOf("Chrome") != -1 ){
-      browser = 'Google Chrome';
-  }
-  else if(navigator.userAgent.indexOf("Safari") != -1){
-      browser = 'Safari';
-  }
-  else if(navigator.userAgent.indexOf("Firefox") != -1 ){
-      browser = 'Mozilla Firefox';
-  }
-  else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )){
-      browser = 'Microsoft Internet Explorer';
-  }
-  else if(navigator.userAgent.indexOf("Edge") != -1 ){
-      browser = 'Microsoft Edge';
-  }
-  else if(navigator.userAgent.indexOf("Trident") != -1 ){
-      browser = 'Microsoft Internet Explorer';
-  }
-  else{
-      browser = 'Unknown Browser';
-  }
-  
-  var text = 'Korisnik se prijavio preko ' + browser + ' preglednika.';
-  var tipaPopup = TipaPopup({
-    title: '',
-    message: text,
-    duration: 5000,
-    position: 'center',
-    type: 'success',
-    width: '200px',
-    height: 'auto',
-    closeBtn: true,
-    closeOnClick: false
-  });
-  
-  tipaPopup.show();
+// Pronalaženje dugmeta po ID-u
+var placanjeButton = document.getElementById("placanjeButton");
+
+// Dodavanje slušača događaja "click" na dugme
+placanjeButton.addEventListener("click", placanjeFunkcija);
+
+// Definicija funkcije placanjeFunkcija
+function placanjeFunkcija() {
+  // Ovdje dodajte željeni kod za funkciju placanjeFunkcija
+  // Na primjer:
+  document.getElementById("maindio").style.display = 'none';
+  document.getElementById("ovojekartica").style.display = 'block';
+  document.getElementById("stajlovi").disabled=true;
+  document.getElementById("kartice").disabled=false;
+}
+/////////////
+var placanjeDugme = document.getElementById("placanjeDugme");
+
+// Dodavanje slušača događaja "click" na dugme
+placanjeDugme.addEventListener("click", funkcijazaKARTICU);
+
+// Definicija funkcije placanjeFunkcija
+function funkcijazaKARTICU() {
+  // Ovdje dodajte željeni kod za funkciju placanjeFunkcija
+  // Na primjer:
+  document.getElementById("maindio").style.display = 'none';
+  document.getElementById("ovojekartica").style.display = 'none';
+  document.getElementById("placanje1").style.display = 'block';
+  document.getElementById("stajlovi").disabled=true;
+  document.getElementById("kartice").disabled=true;
+  document.getElementById("stajleri").disabled=true;
+  document.getElementById("stajleribrt").disabled=true;
+  document.getElementById("placanjebrt").disabled=false;
+}
+////////
+
+var placanjegotovo = document.getElementById("placanjegotovo");
+
+// Dodavanje slušača događaja "click" na dugme
+placanjegotovo.addEventListener("click", funkcijazakraj);
+
+// Definicija funkcije placanjeFunkcija
+function funkcijazakraj() {
+  // Ovdje dodajte željeni kod za funkciju placanjeFunkcija
+  // Na primjer:
+  document.getElementById("alertara").style.display = 'block';
 }
 
+/// KRAJ SVEGA
+
+var svevratiunormalu = document.getElementById("svevratiunormalu");
+
+// Dodavanje slušača događaja "click" na dugme
+svevratiunormalu.addEventListener("click", sveunormaluide);
+
+// Definicija funkcije placanjeFunkcija
+function sveunormaluide() {
+  // Ovdje dodajte željeni kod za funkciju placanjeFunkcija
+  // Na primjer:
+  document.getElementById("alertara").style.display = 'none';
+  document.getElementById("maindio").style.display = 'block';
+  document.getElementById("ovojekartica").style.display = 'none';
+  document.getElementById("placanje1").style.display = 'none';
+  document.getElementById("stajlovi").disabled=false;
+  document.getElementById("kartice").disabled=true;
+  document.getElementById("stajleri").disabled=true;
+  document.getElementById("stajleribrt").disabled=true;
+  document.getElementById("placanjebrt").disabled=true;
+}

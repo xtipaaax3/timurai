@@ -88,7 +88,8 @@ const handleSubmit = async (e) => {
   const response = await fetch('https://timurai.onrender.com/', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
+      Authorization: `Bearer ${process.env.API_KEY}`,
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       prompt: data.get('prompt'),
@@ -106,7 +107,7 @@ const handleSubmit = async (e) => {
   } else {
     const err = await response.text();
 
-    messageDiv.innerHTML = 'Something went wrong';
+    messageDiv.innerHTML = 'Kao TIMUR AI, primjecujem grešku? Brzo kontaktiraj TIMURA!';
     alert(err);
   }
 };
@@ -121,4 +122,3 @@ form.addEventListener('keydown', (e) => {
     }
   }
 });
-

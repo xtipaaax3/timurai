@@ -5,17 +5,80 @@
     <link rel="icon" type="image/svg+xml" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <title>TimurAI - v1.6</title>
+    <title>TimurAI - v1.7</title>
     <link rel="stylesheet" href="style.css" id="stajlovi" />
     <link rel="stylesheet" href="stajlesss.css" id="stajleri" disabled />
     <link rel="stylesheet" href="bzsstyle.css" id="stajleribrt" disabled/>
+    <link rel="stylesheet" href="placanje.css" id="placanjebrt" disabled/>
+    <link rel="stylesheet" href="kartice.css" id="kartice" disabled/>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
+    <!-- PRETPLATA USPJESNA -->
+    <div id="alertara" class="alera" style="display:none;">
+      <div class="alert" style="color: #000;;">
+        <span class="closebtn" id="svevratiunormalu">X</span> 
+        <b>PRETPLATA:</b> Uspjesno ste kupili TIMUR AI VIP PRETPLATU, VAŠ KOD JE : TIMUR-AI-VIP-#33319 SRETNOOOOOOOOO!
+      </div>
+    </div>
+    <!---->
+    <div id="ovojekartica" class="karticebatonga" style="display: none;">
+
+      <div class="card">
+        <div class="product-image"><img src="http://1.1m.yt/aOI3mrx.png" alt="" /></div>
+        <div class="product-info">
+          <h1 class="product-name">TIMUR AI VIP MEMBERSHIP</h1>
+          <h2 class="product-price">99</h2>
+          <h3 class="product-slogan">Uz TIMUR AI VIP dobijate najnovije update prvi, i otkrivate najnovije mogucnosti, te sticete 24/7 Support, jednom platite i imate vjecno.</h3>
+          <ul class="preferences">            
+            <li>
+              <span class="list-name">KOLICINA KODOVA</span>
+              <select class="qty">
+                <option>1</option>
+              </select>
+            </li>
+          </ul>
+          <a class="button" href="#" id="placanjeDugme">KUPI</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="placanje" id="placanje1" style="display:none;">
+      <div class="payment">
+        <div class="bg"></div>
+        <div class="card">
+          <img src="https://img.icons8.com/plasticine/100/000000/sim-card-chip.png" class="chip"/>
+          <div class="logo"></div>
+          <h2 class="bankName" contenteditable="true">Ime Banke</h2>
+          <form>
+            <div class="inputBox">
+              <span>Broj Kartice</span>
+              <input type="text" placeholder="0123 456 78901 2345" maxlength="19">
+            </div>
+            <div class="inputBox">
+              <span>Ime na Kartici</span>
+              <input type="text" placeholder="IME_PREZIME">
+            </div>
+            <div class="group">
+            <div class="inputBox">
+              <span>Validna do:</span>
+              <input type="text" placeholder="MM/YY" maxlength="5">
+            </div>
+            <div class="inputBox">
+              <span>CCV</span>
+              <input type="password" placeholder="***" maxlength="3">
+            </div>
+            </div>
+          </form>
+        </div>
+      <button class="btn" id="placanjegotovo">Prihvati & Plati</button>
+      </div>
+  </div>
     <div id="tipapopup" class="tipapopup" style="display: none;">
       <p id="tipapopup-text" class="tipapopup-text"></p>
     </div>
+    <div id="maindio" class="ovojesvemaindio">
     <div id="testsamo" class="testiramsamo">
     <div class="app">
       <div class="header">
@@ -51,7 +114,7 @@
          <div class="msg-detail">
           <div class="msg-username">TIMUR AI - RAZGOVOR</div>
           <div class="msg-content">
-           <span class="msg-message">version : v1.6</span>
+           <span class="msg-message">version : v1.7</span>
            <span class="msg-date">ONLINE</span>
           </div>
          </div>
@@ -112,6 +175,7 @@
       <div class="popup-content">
         <div class="detail-change">
           Promjeni boju
+          <button id="placanjeButton" class="placanjebrate">KUPI PRETPLATU></button>
           <button class="close-btnn">X</button>
           <div class="colors">
             <div class="color blue selected" data-color="blue"></div>
@@ -124,7 +188,9 @@
     </div>
   </div>
   <script src="//code.tidio.co/xm4agewpqd0g4rtogzdemxcku1bzfokn.js" async></script>
+</div>
     <script type="module" src="script.js"></script> 
-    <script type="module" src="glavni.js"></script> <!-- NAPOMENA : TIMURE SUTRA DODAJ NOVI TAB BAR -->
+    <script type="module" src="glavni.js"></script>
+    <script src="kartica.js"></script><!-- NAPOMENA : TIMURE SUTRA DODAJ NOVI TAB BAR -->
   </body>
 </html>

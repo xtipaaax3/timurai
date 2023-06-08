@@ -793,7 +793,17 @@ textarea {
   cursor: pointer;
   border-radius: 50%;
 }
+.placanjebrate {
 
+  position: absolute;
+  top: 65px;
+  right: 220px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25%;
+
+}
 @media (max-width: 1120px) {
   .detail-area {
     display: none;
@@ -860,5 +870,11 @@ textarea {
     outline: none;
     overflow: hidden;
     resize: none;
+  }
+  .placanjebrate {
+
+    position: relative;
+    top: 30px;
+    left: -5px;
   }
 }
